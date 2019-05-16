@@ -1,0 +1,12 @@
+
+a=int(input())
+r=0
+t=a
+while (a>0):
+	s=a%10
+	r=r+s*s*s
+	a=a//10
+if(r==t):
+	print("Armstrong")
+else:
+	print("Not Armstrong")
