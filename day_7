@@ -70,3 +70,32 @@ def nearest_palindrome(number):
 
 number=12300
 print(nearest_palindrome(number))
+
+#PF-Assgn-48
+
+def find_correct(word_dict):
+    c1=0
+    c2=0
+    c3=0
+    for i in word_dict:
+        if(i==word_dict[i]):
+            c1+=1
+        elif(len(i)==len(word_dict[i])):
+            c=0
+            for j in range(0,len(i)):
+                if(i[j]!=word_dict[i][j]):
+                    c+=1
+            if(c<=2):
+                c2+=1
+            else:
+                c3+=1
+        else:
+                c3+=1
+    list=[]
+    list.append(c1)
+    list.append(c2)
+    list.append(c3)
+    return list
+
+word_dict={"THEIR": "THEIR","BUSINESS":"BISINESS","WINDOWS":"WINDMILL","WERE":"WEAR","SAMPLE":"SAMPLE"}
+print(find_correct(word_dict))
