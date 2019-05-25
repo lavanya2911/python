@@ -138,3 +138,30 @@ def check_anagram(data1,data2):
         return False
     
 print(check_anagram("resell","scller"))
+
+
+#PF-Assgn-56
+
+def max_frequency_word_counter(data):
+    word=""
+    frequency=0
+    s_list=[]
+    c_list=[]
+    max_length=0
+    data=data.lower()
+    str.list=data.split()
+    u_words=set(str_list)
+    for words in range u_words:
+        s_list.append(words)
+        c_list.append(str_list.count(words)
+    for i in range(0,len(c_list)):
+        if(c_list[i]>frequency):
+            frequency=c_list[i]
+            word=s_list[i]
+        elif(c_list[i]==frequency):
+            frequency = c_list[i]
+            if(len(s_list[i])>max_length):
+                max_length = len(s_list[i])
+                word = s_list[i]
+    data="Work like you do not need money, love like you have never been hurt, and dance like no one is watching"
+max_frequency_word_counter(data)
