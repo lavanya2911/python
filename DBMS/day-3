@@ -1,0 +1,91 @@
+ass#15
+
+INSERT INTO Shopper VALUES(101,'Mark Jane','M',1234567890,'Allen Street_New York')
+ass#16
+ 
+ INSERT INTO Article VALUES('A1001','Mouse',500,0,'C')
+ 
+ ass#17
+ 
+ INSERT INTO Store VALUES('Loyal World','Infy Campus,Mysore','Rohan Kumar')
+ 
+ ass#18
+ 
+ INSERT INTO Bill VALUES(1001,'Loyal World',101,'A1001',1000,'20-OCT-15',2)
+ 
+ ass#19
+ 
+ INSERT INTO Supplier VALUES('S501','Avaya Ltd',9012345678,'Mysore')
+ 
+ ass#21
+ 
+ SELECT quotationid,sname,itemcode, quotedprice,qdate,qstatus FROM Quotation
+WHERE Qstatus='Rejected' OR Qstatus='Closed'
+
+ass#22
+
+SELECT Designation,Salary FROM EmpDetails
+WHERE Designation='Manager' OR Designation='Billing Staff'
+
+ass#23(ERR)
+
+SELECT Roid ,Location FROM Retailoutlet
+WHERE Location='Dallas'
+
+ass#24
+
+SELECT OrderId,QuotationId,Status FROM Orders WHERE OrderDate BETWEEN '1-Dec-2014' and '1-Jan-2015'
+
+ass#25(ERR)
+
+SELECT itemcode,descr, price FROM Item WHERE Descr='Lee T-Shirt' OR Descr='Levis T-Shirt' AND category='B'
+
+ass#26
+
+SELECT  DISTINCT Designation,salary FROM EmpDetails
+
+ass#27
+
+SELECT Itemcode,Descr,Price FROM Item 
+
+ass#28
+
+SELECT QuotationId,Sname FROM Quotation WHERE QStatus='Accepted' or QStatus='Rejected'
+
+
+ass#30
+
+SELECT DISTINCT ItemType FROM ITEM
+
+ass#31
+
+SELECT orderid, quotationid, status, pymtdate FROM Orders WHERE Status='Ordered'
+
+ass#32
+
+SELECT DISTINCT itemtype,category FROM Item 
+
+ass#34
+
+INSERT INTO City VALUES('Mysore')
+
+ass#35
+
+INSERT INTO Address VALUES(350,'Electronics City',	'Mysore',570018,'Karnataka')
+
+ass#36
+
+INSERT INTO Article VALUES('A1002','Keyboard',1000,10,'B')
+
+ass#37
+
+SELECT quotationid,qdate,quotedprice FROM Quotation WHERE (quotedprice>1400 AND quotedprice<2150)
+
+ass#38
+
+
+
+
+
+
+
