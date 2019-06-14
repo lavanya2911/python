@@ -1,36 +1,86 @@
+EX#10
+
+INSERT INTO Salesman VALUES(11,'Elizabeth', 'London')
+
+EX#11
+
+INSERT INTO Product VALUES(110,'Bat',50,'Sports',NULL)
+
+EX#12
+
+SELECT * FROM Product
+
+EX#13
+
+SELECT DISTINCT PRODID,PRICE,CATEGORY FROM Product
+
+EX#14
+
+SELECT DISTINCT CATEGORY FROM Product
+
+EX#15
+
+SELECT Prodid,Pdesc,Category,Discount FROM Product WHERE Category='Apparel'
+
+EX#16
+
+SELECT Prodid,pdesc,Category,Discount FROM Product WHERE Pdesc IS NULL
+
+EX#17
+
+SELECT Prodid,pdesc,Category,Discount FROM Product WHERE category='Apparel' and discount>5
+
+EX#18
+
+UPDATE Product SET Discount=25 WHERE Category='Sports'
+
+EX#19
+
+UPDATE Product SET Price=50 WHERE Category='Apparel' and Pdesc='Trouser'
+
+EX#20
+
+UPDATE Salesman SET Sname='Jenny',Location='Bristol' WHERE SId=3
+
+EX#21
+
+DELETE FROM SaleDetail WHERE SaleId=1004
+
+EX#22
+
+DELETE FROM SaleDetail WHERE Quantity>5
+
 ass#15
 
 INSERT INTO Shopper VALUES(101,'Mark Jane','M',1234567890,'Allen Street_New York')
+
 ass#16
  
  INSERT INTO Article VALUES('A1001','Mouse',500,0,'C')
  
- ass#17
+ass#17
  
- INSERT INTO Store VALUES('Loyal World','Infy Campus,Mysore','Rohan Kumar')
+INSERT INTO Store VALUES('Loyal World','Infy Campus,Mysore','Rohan Kumar')
  
- ass#18
+ass#18
  
- INSERT INTO Bill VALUES(1001,'Loyal World',101,'A1001',1000,'20-OCT-15',2)
+INSERT INTO Bill VALUES(1001,'Loyal World',101,'A1001',1000,'20-OCT-15',2)
  
- ass#19
+ass#19
  
- INSERT INTO Supplier VALUES('S501','Avaya Ltd',9012345678,'Mysore')
+INSERT INTO Supplier VALUES('S501','Avaya Ltd',9012345678,'Mysore')
  
- ass#21
+ass#21
  
- SELECT quotationid,sname,itemcode, quotedprice,qdate,qstatus FROM Quotation
-WHERE Qstatus='Rejected' OR Qstatus='Closed'
+SELECT quotationid,sname,itemcode, quotedprice,qdate,qstatus FROM Quotation WHERE Qstatus='Rejected' OR Qstatus='Closed'
 
 ass#22
 
-SELECT Designation,Salary FROM EmpDetails
-WHERE Designation='Manager' OR Designation='Billing Staff'
+SELECT Designation,Salary FROM EmpDetails WHERE Designation='Manager' OR Designation='Billing Staff'
 
 ass#23(ERR)
 
-SELECT Roid ,Location FROM Retailoutlet
-WHERE Location='Dallas'
+SELECT Roid ,Location FROM Retailoutlet WHERE Location='Dallas'
 
 ass#24
 
@@ -51,7 +101,6 @@ SELECT Itemcode,Descr,Price FROM Item
 ass#28
 
 SELECT QuotationId,Sname FROM Quotation WHERE QStatus='Accepted' or QStatus='Rejected'
-
 
 ass#30
 
@@ -83,7 +132,11 @@ SELECT quotationid,qdate,quotedprice FROM Quotation WHERE (quotedprice>1400 AND 
 
 ass#38
 
+select itemtype,descr,price from Item where price>4000
 
+ass#39
+
+select designation,salary from EmpDetails where (designation='billing staff' or designation='manager') or (salary>=2500 and salary<=5000);
 
 
 
