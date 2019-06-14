@@ -30,7 +30,7 @@ Score	VARCHAR2(30) CONSTRAINT mt_se_nn NOT NULL
 
 EX#6(ERR)
 
-alter table Player ADD (MatchesPlayed INTEGER,mathcheswon INTEGER);
+alter table Player ADD (MathesPlayed INTEGER,mathcheswon INTEGER);
 
 EX#7
 
