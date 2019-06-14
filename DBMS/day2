@@ -44,13 +44,13 @@ EX#9
 
 ALTER TABLE player MODIFY PName VARCHAR2(50)
 
-EX#10(ERR)
+ASS#2
 
 CREATE TABLE Shopper(
 Shopperid INTEGER primary key,
 ShopperName VARCHAR2(20) NOT NULL,
-Gender VARCHAR(6),
-MobileNo NUMBER(10) NOT NULL,
+Gender CHAR(6) CHECK(Gender IN('Male','Female')),
+MobileNo NUMBER NOT NULL,
 Address VARCHAR(50)
 )
 
