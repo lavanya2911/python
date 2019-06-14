@@ -1,0 +1,6 @@
+EX#23
+
+SELECT prodid,pdesc,category FROM Product WHERE UPPER(category)='ELECTRONICS'
+
+EX#24
+
