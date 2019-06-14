@@ -1,0 +1,135 @@
+EX#3
+
+CREATE TABLE Player(
+PId INTEGER PRIMARY KEY,
+PName VARCHAR2(20) NOT NULL,
+Ranking INTEGER
+);
+
+EX#4
+
+CREATE TABLE Tournament(
+TId INTEGER PRIMARY KEY,
+TName VARCHAR2(30) NOT NULL,
+StartDt	DATE NOT NULL, 
+EndDt	DATE NOT NULL,
+Prize INTEGER NOT NULL
+)
+
+EX#5(ERR)
+
+CREATE TABLE Match(
+MId INTEGER CONSTRAINT mt_mi_pk PRIMARY KEY,
+Tid INTEGER,
+Player1	INTEGER,
+Player2	INTEGER,
+MatchDt	DATE CONSTRAINT mt_md_nn NOT NULL,
+Winner	INTEGER,
+Score	VARCHAR2(30) CONSTRAINT mt_se_nn NOT NULL
+)
+
+EX#6(ERR)
+
+alter table Player ADD (MatchesPlayed INTEGER,mathcheswon INTEGER);
+
+EX#7
+
+alter table Player drop(contactno)
+
+EX#8
+
+alter table Player rename column PId to PlayerId; 
+
+EX#9
+
+ALTER TABLE player MODIFY PName VARCHAR2(50)
+
+EX#10(ERR)
+
+CREATE TABLE Shopper(
+Shopperid INTEGER primary key,
+ShopperName VARCHAR2(20) NOT NULL,
+Gender VARCHAR(6),
+MobileNo NUMBER(10) NOT NULL,
+Address VARCHAR(50)
+)
+
+ASS#3
+
+ALTER TABLE Shopper MODIFY MobileNo  VARCHAR(15)
+
+ASS#4(ERR)
+
+CREATE TABLE Article(
+ArCode	CHAR(5) PRIMARY KEY ,
+ArName	VARCHAR2(30)   NOT NULL,
+Rate NUMBER(8,2),
+Quantity  NUMBER(4) DEFAULT 0,
+Class	CHAR(1) 
+)
+
+ASS#5
+
+CREATE TABLE Store(
+Name VARCHAR2(20),
+Location VARCHAR(30),
+ManagerName VARCHAR2(30) 
+)
+
+ASS#6
+
+ALTER TABLE store RENAME COLUMN Name TO StoreName
+
+ASS#7(ERR)
+
+CREATE TABLE Bill(
+BillNo	NUMBER,
+StoreNo VARCHAR2(20),
+Shopperid NUMBER,
+ArCode	CHAR(5),
+Amount	NUMBER,
+BillDate DATE,
+Quantity NUMBER(4) DEFAULT 1
+)
+
+ASS#8
+
+CCREATE TABLE Supplier(
+Supplierid VARCHAR2(6) PRIMARY KEY,
+Name VARCHAR2(30),
+ContactNo VARCHAR2(15) NOT NULL,
+Emailid	VARCHAR2(30)
+)
+
+ASS#9
+
+ALTER TABLE Supplier ADD City VARCHAR(10)
+
+ASS#10
+
+ALTER TABLE Supplier DROP(Emailid)
+
+ASS#11
+
+CREATE TABLE City(
+City VARCHAR2(20)  UNIQUE
+)
+
+ASS#12
+
+ALTER TABLE City drop(City)
+
+ASS#13(ERR)
+
+CREATE TABLE Address(
+HouseNo NUMBER CONSTRAINT Ad_HN_pk PRIMARY KEY,
+Street VARCHAR2(30),
+city VARCHAR2(20),
+zip NUMBER(6),
+state VARCHAR2(5)
+)
+
+ASS#14
+
+ALTER TABLE Address MODIFY state VARCHAR2(20)
+
