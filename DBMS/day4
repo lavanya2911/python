@@ -9,3 +9,7 @@ SELECT  PRODID,SUBSTR(Pdesc,1,5) AS pdesc_five,CATEGORY from Product;
 EX#27
 
 SELECT prodid,category,price,discount FROM Product ORDER BY category DESC,price Asc;
+
+EX#28
+
+select prodid,category,discount from product where category='Apparel' or  category='Sports' order by category,discount
